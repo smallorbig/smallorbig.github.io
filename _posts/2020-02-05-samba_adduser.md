@@ -20,28 +20,32 @@ tags:
 다음 명령어로 사용자를 추가한다.
 
 ```bash
-$sudo adduser <user_name>
+$sudo adduser <user-name>
 ```
 
-그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 `<user_passwd>`라고 하자.
+그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 'user-passwd'라고 하자.
 '~/etc/group'파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
 
-<user<sub>name</sub>>:x:<number>:
+```bash
+<user_name>:x:<number>:  
+```
 
 
 # group
 
 서버에 폴더별로 사용자 그룹을 지정해 두었다.
-따라서 사용자 그룹에 <user<sub>name</sub>>을 추가하는 작업을 한다.
+따라서 사용자 그룹에 \`user-name\`을 추가하는 작업을 한다.
 
 ```bash
-$sudo groupadd <group_name>
-$sudo useradd -G <group_name> <user_name>
+$sudo groupadd <group-name>
+$sudo useradd -G <group-name> <user-name>
 ```
 
 '~/etc/group'파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
 
-<group<sub>name</sub>>:x:<number>:<user<sub>name</sub>>
+```bash
+<group_name>:x:<number>:<user-name>  
+```
 
 
 # sambda 폴더 지정
@@ -50,7 +54,7 @@ $sudo useradd -G <group_name> <user_name>
 
 ```bash
 [project_name]
-      path = <folder_path>
+      path = <folder-path>
       writable = yes
       read only = no
       browseable = yes
@@ -58,19 +62,19 @@ $sudo useradd -G <group_name> <user_name>
       create mask = 644
       directory mask = 755
       guest ok = no
-      valid users = @<group_name>
-      force user = <admin_user_name>
+      valid users = @<group-name>
+      force user = <admin-user-name>
 ```
 
 
 # samba user 추가
 
-다음 명령어로 samba 사용자로 <user<sub>name</sub>>을 추가한다. 
-adduser로 추가할 때 적었던 패스워드를 적었는데, 다른 패스워드로 해도 되는지는 잘 모르겠다.
+다음 명령어로 samba 사용자로 \`user-name\`을 추가한다. 
+\`adduser\`로 추가할 때 적었던 패스워드를 적었는데, 다른 패스워드로 해도 되는지는 잘 모르겠다.
 알게되면 추가.
 
 ```bash
-$smbpasswd -a <user_name>
+$smbpasswd -a <user-name>
 New SMB password:
 Retype new SMB password:
 ```
@@ -88,9 +92,9 @@ $sudo service smbd restart
 # Comments
 
 ftp 서비스를 사용하는 것 보다 윈도우 사용자에게 samba 서비스가 더 사용하기 편리한 듯 하다.
-윈도우 사용자는 바로가기를 만들어서 '\\\\<ip<sub>address</sub>>\\<forder<sub>name</sub>>'으로 접속하도록 만들면 편리하다.
+윈도우 사용자는 바로가기를 만들어서 '\\\ip-address\forder-name'으로 접속하도록 만들면 편리하다.
 
--   참고링크 : [nil](https://citylock.tistory.com/547)
+-   참고링크 : [시티락 지식창고](https://citylock.tistory.com/547)
 
 
 <!----- Footnotes ----->

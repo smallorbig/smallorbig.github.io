@@ -19,14 +19,14 @@ tags:
 
 다음 명령어로 사용자를 추가한다.
 
-```bash
+```plain
 $sudo adduser <user-name>
 ```
 
-그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 \`user-passwd'라고 하자.
-\`~/etc/group'파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
+그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 `user_passwd` 라고 하자.
+`~/etc/group` 파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
 
-```bash
+```plain
 <user_name>:x:<number>:  
 ```
 
@@ -34,25 +34,25 @@ $sudo adduser <user-name>
 # group
 
 서버에 폴더별로 사용자 그룹을 지정해 두었다.
-따라서 사용자 그룹에 \`user-name\`을 추가하는 작업을 한다.
+따라서 사용자 그룹에 `user-name` 을 추가하는 작업을 한다.
 
 ```plain
 $sudo groupadd <group-name>
 $sudo useradd -G <group-name> <user-name>
 ```
 
-'~/etc/group'파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
+`~/etc/group` 파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
 
-```bash
+```plain
 <group_name>:x:<number>:<user-name>  
 ```
 
 
 # sambda 폴더 지정
 
-'/etc/samba/smb.conf' 파일에 다음 내용을 추가한다.
+`/etc/samba/smb.conf` 파일에 다음 내용을 추가한다.
 
-```bash
+```plain
 [project_name]
       path = <folder-path>
       writable = yes
@@ -69,11 +69,11 @@ $sudo useradd -G <group-name> <user-name>
 
 # samba user 추가
 
-다음 명령어로 samba 사용자로 \`user-name\`을 추가한다. 
-\`adduser\`로 추가할 때 적었던 패스워드를 적었는데, 다른 패스워드로 해도 되는지는 잘 모르겠다.
+다음 명령어로 `samba` 사용자로 `user-name` 을 추가한다. 
+`adduser` 로 추가할 때 적었던 패스워드를 적었는데, 다른 패스워드로 해도 되는지는 잘 모르겠다.
 알게되면 추가.
 
-```bash
+```plain
 $smbpasswd -a <user-name>
 New SMB password:
 Retype new SMB password:
@@ -84,7 +84,7 @@ Retype new SMB password:
 
 다음 명령어로 samba 서비스를 재시작 하면 위 내용이 적용된다. 
 
-```bash
+```plain
 $sudo service smbd restart
 ```
 

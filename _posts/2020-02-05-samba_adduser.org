@@ -1,6 +1,11 @@
-#+STARTUP: showall
 #+TITLE: samba adduser
-#+DATE: [2020-02-05 Wed]
+#+SUBTITLE: This will be the excerpt.
+#+DATE: 2020-02-05
+
+#+STARTUP: showall indent
+#+OPTIONS: toc:nil 
+#+OPTIONS: tex:t
+
 * Intro
   우분투 samba를 사용해서 자료 공유 중인 서버가 있다.
   사용자를 추가해서 특정 폴더에만 그 사용자가 접속하도록 관리 중인데,

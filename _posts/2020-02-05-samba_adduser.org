@@ -1,13 +1,14 @@
 #+TITLE: samba adduser
-#+SUBTITLE: This will be the excerpt.
+#+SUBTITLE: 우분투 서버에 samba 사용자를 추가하자.
 #+DATE: 2020-02-05
 
 #+STARTUP: showall indent
 #+OPTIONS: toc:nil 
 #+OPTIONS: tex:t
-#+JEKYLL_TAGS: samba
+#+JEKYLL_TAGS: server, samba
 
 
+* Intro
 우분투 =samba= 를 사용해서 자료 공유 중인 서버가 있다.
 사용자를 추가해서 특정 폴더에만 그 사용자가 접속하도록 관리 중인데,
 그 방법을 기록해 둔다.
@@ -19,7 +20,6 @@
   #+END_SRC
   그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 =user_passwd= 라고 하자.
   =~/etc/group= 파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
-
   #+BEGIN_SRC plain
   <user_name>:x:<number>:  
   #+END_SRC
@@ -32,7 +32,6 @@
   $sudo useradd _G <group_name> <user_name>
   #+END_SRC
   =~/etc/group= 파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
-
   #+BEGIN_SRC plain
   <group_name>:x:<number>:<user_name>  
   #+END_SRC

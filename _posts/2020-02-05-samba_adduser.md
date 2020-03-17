@@ -1,12 +1,17 @@
 ---
 title: "samba adduser"
-excerpt: "This will be the excerpt."
+excerpt: "우분투 서버에 samba 사용자를 추가하자."
 date: 2020-02-05
 categories: 
 - post
 tags: 
+- server, 
 - samba
 ---
+
+
+# Intro
+
 우분투 `samba` 를 사용해서 자료 공유 중인 서버가 있다.
 사용자를 추가해서 특정 폴더에만 그 사용자가 접속하도록 관리 중인데,
 그 방법을 기록해 둔다.

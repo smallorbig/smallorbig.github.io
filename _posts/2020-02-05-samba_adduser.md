@@ -20,7 +20,7 @@ tags:
 다음 명령어로 사용자를 추가한다.
 
 ```plain
-$sudo adduser <user-name>
+$sudo adduser <user_name>
 ```
 
 그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 `user_passwd` 라고 하자.
@@ -34,17 +34,17 @@ $sudo adduser <user-name>
 # group
 
 서버에 폴더별로 사용자 그룹을 지정해 두었다.
-따라서 사용자 그룹에 `user-name` 을 추가하는 작업을 한다.
+따라서 사용자 그룹에 `user_name` 을 추가하는 작업을 한다.
 
 ```plain
-$sudo groupadd <group-name>
-$sudo useradd -G <group-name> <user-name>
+$sudo groupadd <group_name>
+$sudo useradd _G <group_name> <user_name>
 ```
 
 `~/etc/group` 파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
 
 ```plain
-<group_name>:x:<number>:<user-name>  
+<group_name>:x:<number>:<user_name>  
 ```
 
 
@@ -54,7 +54,7 @@ $sudo useradd -G <group-name> <user-name>
 
 ```plain
 [project_name]
-      path = <folder-path>
+      path = <folder_path>
       writable = yes
       read only = no
       browseable = yes
@@ -62,19 +62,19 @@ $sudo useradd -G <group-name> <user-name>
       create mask = 644
       directory mask = 755
       guest ok = no
-      valid users = @<group-name>
-      force user = <admin-user-name>
+      valid users = @<group_name>
+      force user = <admin_user_name>
 ```
 
 
 # samba user 추가
 
-다음 명령어로 `samba` 사용자로 `user-name` 을 추가한다. 
+다음 명령어로 `samba` 사용자로 `user_name` 을 추가한다. 
 `adduser` 로 추가할 때 적었던 패스워드를 적었는데, 다른 패스워드로 해도 되는지는 잘 모르겠다.
 알게되면 추가.
 
 ```plain
-$smbpasswd -a <user-name>
+$smbpasswd -a <user_name>
 New SMB password:
 Retype new SMB password:
 ```
@@ -91,8 +91,8 @@ $sudo service smbd restart
 
 # Comments
 
-ftp 서비스를 사용하는 것 보다 윈도우 사용자에게 samba 서비스가 더 사용하기 편리한 듯 하다.
-윈도우 사용자는 바로가기를 만들어서 '\\\ip-address\forder-name'으로 접속하도록 만들면 편리하다.
+ftp 서비스를 사용하는 것 보다 윈도우 사용자에게 `samba` 서비스가 더 사용하기 편리한 듯 하다.
+윈도우 사용자는 바로가기를 만들어서 `\\ip_address\forder_name` 으로 접속하도록 만들면 편리하다.
 
 -   참고링크 : [시티락 지식창고](https://citylock.tistory.com/547)
 

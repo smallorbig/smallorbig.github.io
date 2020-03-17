@@ -23,8 +23,8 @@ tags:
 $sudo adduser <user-name>
 ```
 
-그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 \`user-passwd\`라고 하자.
-\`~/etc/group\`파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
+그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 \`user-passwd'라고 하자.
+\`~/etc/group'파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
 
 ```bash
 <user_name>:x:<number>:  
@@ -36,7 +36,7 @@ $sudo adduser <user-name>
 서버에 폴더별로 사용자 그룹을 지정해 두었다.
 따라서 사용자 그룹에 \`user-name\`을 추가하는 작업을 한다.
 
-```bash
+```plain
 $sudo groupadd <group-name>
 $sudo useradd -G <group-name> <user-name>
 ```

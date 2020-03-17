@@ -23,7 +23,7 @@ tags:
 $sudo adduser <user_name>
 ```
 
-그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 라고 하자.
+그러면 패스워드를 입력하라고 나오는데 이 때 입력하는 패스워드를 \`<user<sub>passwd</sub>>\`라고 하자.
 '~/etc/group'파일 안에 다음과 같은 입력이 추가되어 있음을 확인하자.
 
 <user<sub>name</sub>>:x:<number>:

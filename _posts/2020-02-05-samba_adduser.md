@@ -3,7 +3,7 @@ title: "samba adduser"
 excerpt: "우분투 서버에 samba 사용자를 추가하자."
 date: 2020-02-05
 categories: 
-- post
+- Linux
 tags: 
 - server, 
 - samba

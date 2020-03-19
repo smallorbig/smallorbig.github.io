@@ -6,7 +6,7 @@
 #+OPTIONS: toc:nil 
 #+OPTIONS: tex:t
 #+JEKYLL_CATEGORIES: Linux
-#+JEKYLL_TAGS: server, samba
+#+JEKYLL_TAGS: server, jupyter, sage
 
 * Introduction
 

@@ -6,7 +6,8 @@ categories:
 - Linux
 tags: 
 - server, 
-- samba
+- jupyter, 
+- sage
 ---
 
 

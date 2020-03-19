@@ -22,7 +22,7 @@ SageMath를 사용하려면 커널에 등록을 시켜야 하는데 그 방법�
 MacOS에서 다음 명령어로 `sage` 를 설치했었다. 현재 내 컴퓨터에 설치된 SageMath 버젼은 8.8이다. ([참고링크](http://macappstore.org/sage/))
 
 ```bash
-$brew cask install sage
+brew cask install sage
 ```
 
 그러면 SageMath 앱이 설치되는데 아래 주소에 `kernel.json` 파일을 수정해야 한다.
@@ -47,7 +47,7 @@ Anaconda를 실행해서 본인의 Environment의 Terminal을 실행한다.
 Terminal에서 `base` 가 활성화 되어 있는걸 확인하고, 다음 명령어를 실행한다. ([참고링크](https://stackoverflow.com/questions/39296020/how-to-install-sagemath-kernel-in-jupyter))
 
 ```bash
-$sudo jupyter kernelspec install /Applications/SageMath-8.8.app/Contents/Resources/sage/local/share/jupyter/kernels/sagemath
+sudo jupyter kernelspec install /Applications/SageMath-8.8.app/Contents/Resources/sage/local/share/jupyter/kernels/sagemath
 ```
 
 이제 Jupyter Notebook을 실행해보면, 커널에 SageMath 8.8이 추가되어 있는 것을 확인 할 수 있다.

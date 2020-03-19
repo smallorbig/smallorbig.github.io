@@ -1,5 +1,5 @@
 #+TITLE: Resister SageMath to Jupyter Notebook
-# #+SUBTITLE: Jupyter Notebook에 SageMath 커널을 추가하자.
+#+SUBTITLE: Jupyter Notebook에 SageMath 커널을 추가하자.
 #+DATE: 2019-11-05
 
 #+STARTUP: showall indent

@@ -28,7 +28,7 @@ $brew cask install sage
 그러면 SageMath 앱이 설치되는데 아래 주소에 `kernel.json` 파일을 수정해야 한다.
 
 ```plain
-/Applications/SageMath-8.8.app/Contents/Resources/sage/local/share/jupyter/kernels/sagemath
+/Applications/SageMath-8.8.app/Contents/Resources/sage/local/share/jupyter/kernels/sagemath/kernel.json
 ```
 
 딕셔너리 형태로 적혀있는데, 다음 항목을 추가하고 저장한다.

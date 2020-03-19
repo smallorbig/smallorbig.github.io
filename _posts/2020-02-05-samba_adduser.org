@@ -5,7 +5,10 @@
 #+STARTUP: showall indent
 #+OPTIONS: toc:nil 
 #+OPTIONS: tex:t
+<<<<<<< HEAD
 #+JEKYLL_CATEGORIES: Linux
+=======
+>>>>>>> 05048ca... add post
 #+JEKYLL_TAGS: server, samba
 
 

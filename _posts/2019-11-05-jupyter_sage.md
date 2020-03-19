@@ -3,7 +3,7 @@ title: "Resister SageMath to Jupyter Notebook"
 excerpt: ""
 date: 2019-11-05
 categories: 
-- Linux
+- MacOS
 tags: 
 - server, 
 - jupyter, 

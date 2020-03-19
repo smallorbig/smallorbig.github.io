@@ -5,7 +5,7 @@
 #+STARTUP: showall indent
 #+OPTIONS: toc:nil 
 #+OPTIONS: tex:t
-#+JEKYLL_CATEGORIES: Linux
+#+JEKYLL_CATEGORIES: MacOS
 #+JEKYLL_TAGS: server, jupyter, sage
 
 * Introduction
